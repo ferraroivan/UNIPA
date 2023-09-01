@@ -1,6 +1,6 @@
-FROM ubuntu:16.04
-LABEL author="David Elner"
-
-RUN apt-get update \
-    && apt-get install -y iputils-ping \
-    && apt-get clean \
+FROM httpd
+RUN apt-get update
+RUN apt-get install -y iputils-ping
+RUN apt-get install -y inetutils-traceroute
+RUN apt-get install -y iproute2
+RUN apt-get install -y curl telnet dnsutils vim
